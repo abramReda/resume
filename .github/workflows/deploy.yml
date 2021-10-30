@@ -24,3 +24,13 @@ jobs:
           with:
             branch: gh-pages # The branch the action should deploy to.
             folder: dist/cv # The folder the action should deploy.
+
+  build-deploy-heroku:
+      runs-on: ubuntu-latest
+      steps:
+        - uses: actions/checkout@v2
+        - uses: akhileshns/heroku-deploy@v3.12.12 # This is the action
+          with:
+            heroku_api_key: ${{secrets.HEROKU_API_KEY}}
+            heroku_app_name: "ibram-resume" #Must be unique in Heroku
+            heroku_email: "abramreda815@gmail.com"
