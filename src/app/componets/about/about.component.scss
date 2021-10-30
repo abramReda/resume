@@ -1,0 +1,25 @@
+:host{
+  display: flex;
+  flex-direction: column;
+}
+
+.image-cropper {
+  width: 200px;
+  height: 200px;
+  position: relative;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+img {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+  position: absolute;
+  left: -40px;
+}
+.row > h4{
+  margin: 5px 0;
+  min-width: 120px;
+}
