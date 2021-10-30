@@ -15,12 +15,9 @@ jobs:
           run: |
             npm install
             npm run build
+            cp dist/cv/index.html dist/cv/404.html
             echo ===========================
-            pwd
-            echo =====
-            ls
-            echo =====
-            ls dist
+            ls dist/cv
 
         - name: Deploy 🚀
           uses: JamesIves/github-pages-deploy-action@4.1.5
